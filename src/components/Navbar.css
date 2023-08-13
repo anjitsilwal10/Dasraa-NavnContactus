@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+nav {
+    display: flex;
+    gap:20px;
+    align-items: center;
+    background: #ECDBBC;
+    height: 120px;
+    width: 100%;
+    gap: 10%;
+}
+
+
+.logo {
+    margin: 1rem 0 0 2rem;
+    width: 225px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+nav ul {
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #BA1F1B;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.berger{
+    display: none;
+}
+
+
+
+
+.drop-down ul{
+    list-style: none;
+    margin: 0 5px;
+}
+
+.drop-down ul li a {
+    color: #BA1F1B;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.berger:hover .drop-down{
+    display: block;
+    z-index: 1;
+}
+
+
+@media (max-width:900px) {
+    .berger {
+        display: none;
+        display: flex;
+
+    }
+}
+
+
+.drop-down{
+    display: none;
+    position: absolute;
+    background: #ECDBBC;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 6%;
+    left:85%;
+    color: #BA1F1B;
+    font-size: 18px;
+    padding: 7px 13px;
+    text-decoration: none;
+    border-radius: 15px;
+    left:50%;
+}
+
+.berger:hover .drop-down{
+    display: block;
+    z-index: 1;
+}
+
+.contact-btn {
+    background: transparent;
+    border: 2px solid #BA1F1B;
+    border-radius: 15px;
+    padding: 5px 5px;
+    width: 150px;
+    height: auto;
+    color: #BA1F1B;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.contact-btn:hover {
+    background: #BA1F1B;
+    color: #ECDBBC;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #BA1F1B;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+@media (max-width: 952px) {
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        background: #ECDBBC;
+        top: 120px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    /* nav ul li {
+        display: block;
+        margin: 20px 0;
+    } */
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .berger:checked~ul {
+        left: 0;
+    }
+
+    .contact-btn {
+        margin: 0;
+    }
+}
+
+ 
+  

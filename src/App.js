@@ -1,9 +1,14 @@
-import './App.css';
+import Navbar from './components/Nav';
 import Contactus from "./components/Contactus";
+
 
 function App() {
   return (
-   <Contactus/>
+    <>
+    <Navbar />
+    <Contactus />
+    </>
+
   );
 }
 
