@@ -1,184 +1,343 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/* Nav CSS starts from here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 
-nav {
-    display: flex;
-    gap:20px;
-    align-items: center;
+.container-nav {
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    padding: 0;
     background: #ECDBBC;
-    height: 120px;
-    width: 100%;
-    gap: 10%;
+    border-radius: 0%;
+    box-shadow: none;
 }
 
-
-.logo {
-    margin: 1rem 0 0 2rem;
-    width: 225px;
-}
-
-.logo img {
-    width: 100%;
-}
-
-nav ul {
-    margin-right: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-nav ul li {
-    list-style: none;
-    margin: 0 5px;
-}
-
-nav ul li a {
-    color: #BA1F1B;
-    font-size: 18px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-decoration: none;
-}
-
-.berger{
+.dropdown {
     display: none;
 }
 
 
 
 
-.drop-down ul{
-    list-style: none;
-    margin: 0 5px;
-}
 
-.drop-down ul li a {
-    color: #BA1F1B;
-    font-size: 18px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-decoration: none;
-    list-style: none;
-}
+@media screen and (max-width:799px) {
 
 
-.berger:hover .drop-down{
-    display: block;
-    z-index: 1;
-}
+    .nav-one {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
 
-@media (max-width:900px) {
-    .berger {
+    .two {
         display: none;
-        display: flex;
-
-    }
-}
-
-
-.drop-down{
-    display: none;
-    position: absolute;
-    background: #ECDBBC;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 6%;
-    left:85%;
-    color: #BA1F1B;
-    font-size: 18px;
-    padding: 7px 13px;
-    text-decoration: none;
-    border-radius: 15px;
-    left:50%;
-}
-
-.berger:hover .drop-down{
-    display: block;
-    z-index: 1;
-}
-
-.contact-btn {
-    background: transparent;
-    border: 2px solid #BA1F1B;
-    border-radius: 15px;
-    padding: 5px 5px;
-    width: 150px;
-    height: auto;
-    color: #BA1F1B;
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-}
-
-.contact-btn:hover {
-    background: #BA1F1B;
-    color: #ECDBBC;
-}
-
-.checkbtn {
-    font-size: 30px;
-    color: #BA1F1B;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-
-
-
-
-@media (max-width: 952px) {
-
-    nav ul li a {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 858px) {
-    
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        width: 100%;
-        height: auto;
-        background: #ECDBBC;
-        top: 120px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
     }
 
-    /* nav ul li {
+
+    .nav-one img {
+        margin: 1rem 0 0 2rem;
+        width: 225px;
+        padding: 5px;
+    }
+
+    .dropdown {
         display: block;
-        margin: 20px 0;
+        margin: 35px 40px;
+
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ECDBBC;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 6%;
+        left: 0;
+        margin-top: 7%;
+    }
+
+    .dropdown-content a {
+        color: #971b16;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* .dropdown:hover .dropdown-content {
+        display: block;
+        transition-duration: 5s;
+        transition-delay: 10s;
     } */
 
-    nav ul li a {
-        font-size: 16px;
+
+
+
+}
+
+
+@media screen and (min-width:800px) {
+    .nav-one {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+
+
     }
 
-    .berger:checked~ul {
-        left: 0;
+    .nav-one .nav-logo {
+        width: 30%;
+        height: auto;
     }
 
-    .contact-btn {
-        margin: 0;
+    .nav-one ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5px;
+        padding: 15px 20px;
+        text-decoration: none;
+        width: 55%;
+        font-weight: 600;
+        font-size: large;
+    }
+
+    .nav-one img {
+        margin: 1rem 0 0 2rem;
+        width: 225px;
+        padding: 5px;
+    }
+
+    .nav-one ul li {
+        list-style-type: none;
+        text-decoration: none;
+
+    }
+
+    .nav-one ul a {
+        color: #BA1F1B;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+    .nav-one .contactus-btn {
+        background: transparent;
+        border: 2px solid #BA1F1B;
+        border-radius: 15px;
+        padding: 5px 5px;
+        width: 150px;
+        height: auto;
+        color: #BA1F1B;
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
     }
 }
 
- 
-  
+
+/* contactUs page CSS starts from here */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contactus {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ECDBBC;
+    position: relative;
+}
+
+.contactus::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(186, 31, 27);
+    clip-path: polygon(86% 0, 100% 0, 100% 100%, 60% 100%);
+    z-index: 0;
+}
+
+.container {
+    z-index: 0;
+    max-width: 1050px;
+    width: 100%;
+    border-radius: 12px;
+    margin: 10px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);}
+
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    border-radius: 1%;
+}
+
+.content .image-box {
+    max-width: 55%;
+}
+
+.content .image-box img {
+    width: 100%;
+}
+
+.content .topic {
+    font-size: 22px;
+    font-weight: 500;
+    color: #BA1F1B;
+}
+
+.content form {
+    width: 40%;
+    margin-right: 30px;
+}
+
+.content .input-box {
+    height: 50px;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+}
+
+.content .input-box input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 16px;
+    background: #ECDBBC;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.content .input-box input:focus,
+.content .input-box input:valid {
+    border-color: #BA1F1B;
+    background-color: #fff;
+}
+
+.content .input-box label {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    color: #636c72;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.content .input-box input:focus~label,
+.content .input-box input:valid~label {
+    top: 0;
+    left: 12px;
+    display: 14px;
+    color: #BA1F1B;
+    background: #fff;
+}
+
+.content .message-box {
+    min-height: 100px;
+    position: relative;
+}
+
+.content .message-box textarea {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    background: #ECDBBC;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.content .message-box textarea:focus {
+    border-color: #BA1F1B;
+    background-color: #fff;
+}
+
+.content .message-box label {
+    position: absolute;
+    font-size: 16px;
+    color: #636c72;
+    left: 18px;
+    top: 6px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.content .message-box textarea:focus~label {
+    left: 12px;
+    top: -10px;
+    color: #BA1F1B;
+    display: 14px;
+    background: #fff;
+}
+
+.content .input-box input[type="submit"] {
+    color: #ECDBBC;
+    background: #BA1F1B;
+    padding-left: 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.content .input-box input[type="submit"]:hover {
+    color: #BA1F1B;
+    background-color: #fff;
+}
+
+@media (max-width:799px) {
+    .content .image-box {
+        max-width: 70%;
+    }
+
+    .content {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width:799px) {
+    .content .image-box {
+        display: none;
+    }
+
+    .content form {
+        width: 100%;
+        margin-left: 30px;
+    }
+}

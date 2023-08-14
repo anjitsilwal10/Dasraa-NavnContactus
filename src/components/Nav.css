@@ -74,11 +74,15 @@
         font-weight: bold;
     }
 
-    .dropdown:hover .dropdown-content {
+    /* .dropdown:hover .dropdown-content {
         display: block;
         transition-duration: 5s;
         transition-delay: 10s;
-    }
+    } */
+
+
+
+
 }
 
 
