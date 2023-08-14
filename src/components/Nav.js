@@ -15,14 +15,13 @@ function Nav() {
           <img src={Logo} alt="" />
         </div>
 
-        <ul>
+        <ul className="one">
           <li className="dropdown">
             <i className="fas fa-bars"></i>
             <div className="dropdown-content">
               <a href="#">Home</a>
               <a href="#">About</a>
               <a href="#">Portfolio</a>
-              <a href="#"></a>
               <a href="#">
               <button className="contactus-btn">Contact Us</button>
             </a>
